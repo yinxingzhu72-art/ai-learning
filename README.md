@@ -2,69 +2,110 @@
 
 这是我的 AI 学习与项目实践仓库。
 
-这里记录我从基础学习到实际项目开发的过程，包括 AI 技术探索、工具开发、实验记录以及项目迭代。
+记录从 Python 基础、AI 技术学习，到 AI 应用开发的完整过程。
 
-## About This Repository
+---
 
-这个仓库用于记录我的 AI 学习成长过程。
+## AI Tutor Project
 
-主要目标：
+AI Tutor 是当前主要开发项目。
 
-- 学习 AI 应用开发
-- 掌握 Python 编程基础
-- 理解 AI API 和智能工具开发
-- 通过实际项目提升解决问题的能力
-- 建立持续学习和项目迭代的习惯
+目标：
 
+打造一个能够帮助用户：
+- 明确学习目标
+- 分析学习状态
+- 提供下一步行动建议
+- 形成持续学习反馈循环
+
+的 AI 学习助手。
+
+---
+
+## Current MVP
+
+目前已经完成：
+
+- [x] Git / GitHub 项目环境
+- [x] Python 开发环境
+- [x] 基础交互程序
+- [x] 用户信息输入
+- [x] 学习目标收集
+- [x] 简单学习方向判断
+
+
+当前原型：
+
+projects/first_python/main.py
+
+
+---
 
 ## Repository Structure
 
 ai-learning
-├── notes
-│   └── 学习笔记、技术理解、知识整理
+
+├── docs
+│   └── AI Tutor 设计文档
+
 ├── projects
-│   └── 完整项目开发
+│   └── first_python
+│       └── 第一版交互原型
+
 ├── experiments
-│   └── AI 技术实验和功能测试
+│   └── AI 技术实验
+
+├── notes
+│   └── 学习记录
+
 └── tools
-    └── 自己开发的小工具
+    └── 自建工具
 
 
-## Learning Roadmap
+---
 
-### Foundation
+## Development Roadmap
 
-- [x] Git 环境搭建
-- [x] GitHub SSH 配置
-- [x] 创建个人项目仓库
-- [ ] Python 基础
-- [ ] 数据处理基础
+### Phase 1 - Foundation
+- Python 基础
+- Git 工作流
+- 项目结构建立
 
-### AI Development
+### Phase 2 - AI Tutor Prototype
+- 用户状态收集
+- 学习目标分析
+- 基础推荐逻辑
 
-- [ ] 学习 AI API 调用
-- [ ] 理解大语言模型应用开发
-- [ ] 开发第一个 AI 工具
-- [ ] 优化 AI 工作流程
+### Phase 3 - AI Capability
+- 接入 AI 模型
+- Prompt 设计
+- 用户长期记忆
 
-### Projects
+### Phase 4 - Intelligent Learning System
+- 个性化学习规划
+- 学习反馈分析
+- 自动调整策略
 
-- [ ] 第一个 AI 实践项目
-- [ ] 持续迭代项目功能
-- [ ] 总结开发经验
 
+---
 
 ## Philosophy
 
-学习 AI 不只是学习技术本身，更重要的是通过实践解决真实问题。
+学习 AI 不只是学习技术。
 
-这个仓库会记录我的学习过程、遇到的问题以及不断改进的过程。
+更重要的是：
 
+通过 AI 和软件开发，
+解决真实问题，
+建立持续迭代能力。
+
+---
 
 ## Progress
 
-Started: 2026
+Started:
+2026
 
 Current Status:
 
-Building my foundation for AI application development.
+Building AI Tutor prototype.
