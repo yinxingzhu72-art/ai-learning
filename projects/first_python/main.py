@@ -30,7 +30,15 @@ else:
     json.dump(user_profile, file, ensure_ascii=False, indent=4)
 
 learning_plan = []
-if learning_goal == "Python" and level == "新手":
+if "第一个小项目" in user_profile["history"]:
+    print("你已经完成 Python 入门阶段，我们开始进阶学习。")
+
+    learning_plan = [
+        "函数深入学习",
+        "文件处理",
+        "AI项目开发"
+    ]
+elif learning_goal == "Python" and level == "新手":
     print("很好！Python 是编程入门的好选择。")
 
     learning_plan = [
@@ -61,7 +69,7 @@ print("你的学习计划：")
 
 for i, step in enumerate(learning_plan, 1):
     print(str(i) + ". " + step)
-user_profile["history"].extend(learning_plan)
+
 
 with open("user_profile.json", "w", encoding="utf-8") as file:
     json.dump(user_profile, file, ensure_ascii=False, indent=4)
