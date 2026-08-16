@@ -69,7 +69,10 @@ print("你的学习计划：")
 
 for i, step in enumerate(learning_plan, 1):
     print(str(i) + ". " + step)
-
-
+completed = input("请输入已经完成的任务编号：")
+completed_index = int(completed) - 1
+completed_task = learning_plan[completed_index]
+if completed_task not in user_profile["history"]:
+    user_profile["history"].append(completed_task)
 with open("user_profile.json", "w", encoding="utf-8") as file:
     json.dump(user_profile, file, ensure_ascii=False, indent=4)
