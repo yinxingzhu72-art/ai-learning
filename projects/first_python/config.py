@@ -1,0 +1,10 @@
+import os
+
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+USER_PROFILE_PATH = os.path.join(
+    BASE_DIR,
+    "user_profile.json"
+)

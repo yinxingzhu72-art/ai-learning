@@ -1,12 +1,17 @@
+from tutor import run_tutor
 from profile import load_profile, save_profile
 from learning import (
     analyze_stage,
     stage_advice,
     stage_reason,
-    learning_report,
     generate_learning_plan
 )
-from progress import complete_task, calculate_progress
+from report import learning_report
+from progress import (
+    complete_task,
+    calculate_progress,
+    get_progress_detail
+)
 user_profile = load_profile()
 
 user_name = user_profile["name"]
@@ -51,13 +56,12 @@ progress = calculate_progress(
 
 print("当前学习进度：")
 
-completed_count = 0
+completed_count, total_count = get_progress_detail(
+    user_profile,
+    learning_plan
+)
 
-for task in learning_plan:
-    if task in user_profile["history"]:
-        completed_count += 1
-
-print(str(completed_count) + "/" + str(len(learning_plan)))
+print(str(completed_count) + "/" + str(total_count))
 
 print("完成率：" + str(int(progress)) + "%")
 learning_report(

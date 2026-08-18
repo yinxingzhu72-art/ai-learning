@@ -1,17 +1,19 @@
-import json
 import os
+import json
+
+from config import USER_PROFILE_PATH
 
 
 def load_profile():
 
-    if os.path.exists("user_profile.json"):
+  if os.path.exists(USER_PROFILE_PATH):
 
-        with open("user_profile.json", "r", encoding="utf-8") as file:
+       with open(USER_PROFILE_PATH, "r", encoding="utf-8") as file:
             user_profile = json.load(file)
 
-        return user_profile
+       return user_profile
 
-    else:
+  else:
         user_name = input("请输入你的名字：")
 
         print("你好，" + user_name + "! 欢迎来到 AI Tutor。")
@@ -35,7 +37,7 @@ def load_profile():
 
 def save_profile(user_profile):
 
-    with open("user_profile.json", "w", encoding="utf-8") as file:
+   with open(USER_PROFILE_PATH, "w", encoding="utf-8") as file:
 
         json.dump(
             user_profile,

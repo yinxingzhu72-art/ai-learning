@@ -27,3 +27,14 @@ def calculate_progress(user_profile, learning_plan):
         return 0
 
     return completed_count / total_count * 100
+def get_progress_detail(user_profile, learning_plan):
+
+    completed_count = 0
+
+    for task in learning_plan:
+        if task in user_profile["history"]:
+            completed_count += 1
+
+    total_count = len(learning_plan)
+
+    return completed_count, total_count
