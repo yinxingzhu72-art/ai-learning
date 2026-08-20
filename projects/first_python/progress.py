@@ -7,8 +7,10 @@ def complete_task(user_profile, learning_plan, task_number):
 
     task = learning_plan[index]
 
-    if task not in user_profile["history"]:
-        user_profile["history"].append(task)
+    if task in user_profile["history"]:
+        return False
+
+    user_profile["history"].append(task)
 
     return True
 
