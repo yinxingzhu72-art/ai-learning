@@ -1,3 +1,14 @@
+## Project Status
+
+🚧 Developing
+
+Current Version: v0.5
+
+Completed:
+- User profile system
+- Learning memory
+- Learning plan generation
+- Progress tracking
 # AI Learning Journey
 
 这是我的 AI 学习与项目实践仓库。
@@ -22,7 +33,11 @@ AI Tutor 是当前主要开发项目。
 
 ---
 
-## Current MVP
+## Current Status
+
+Version: v0.5
+
+AI Tutor Prototype - User Profile & Learning Memory System
 
 目前已经完成：
 
@@ -40,6 +55,13 @@ AI Tutor 是当前主要开发项目。
 - [x] 用户档案系统
 - [x] 学习历史记录
 - [x] 根据学习状态调整学习路线
+- [x] UserProfile 用户数据模型
+- [x] 用户画像对象化设计
+- [x] 用户状态持久化
+- [x] 学习计划管理
+- [x] 学习任务完成记录
+- [x] 学习进度计算
+- [x] 学习报告生成
 当前 MVP 已支持：
 
 - 保存用户学习信息
@@ -69,23 +91,16 @@ projects/first_python/main.py
 
 ## Repository Structure
 
-ai-learning
-
-├── docs
-│   └── AI Tutor 设计文档
-
-├── projects
-│   └── first_python
-│       └── 第一版交互原型
-
-├── experiments
-│   └── AI 技术实验
-
-├── notes
-│   └── 学习记录
-
-└── tools
-    └── 自建工具
+projects
+└── first_python
+    ├── main.py
+    ├── models.py
+    ├── profile.py
+    ├── tutor.py
+    ├── learning.py
+    ├── progress.py
+    ├── report.py
+    └── user_profile.json
 
 
 ---
@@ -111,6 +126,15 @@ ai-learning
 - 个性化学习规划
 - 学习反馈分析
 - 自动调整策略
+### Phase 5- AI Tutor Prototype (Current)
+- UserProfile system
+- Learning memory
+- Learning progress tracking
+- Feedback loop
+### Phase 6 - AI Capability
+- LLM integration
+- Intelligent learning suggestions
+- Long-term user memory
 
 
 ---
@@ -124,6 +148,22 @@ ai-learning
 通过 AI 和软件开发，
 解决真实问题，
 建立持续迭代能力。
+
+## Current Architecture
+
+AI Tutor currently uses a modular Python architecture:
+
+User
+ ↓
+UserProfile Model
+ ↓
+Tutor Logic
+ ↓
+Learning Plan
+ ↓
+Progress Tracking
+ ↓
+Learning Report
 
 ---
 
