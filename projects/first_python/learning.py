@@ -31,9 +31,9 @@ def stage_reason(stage):
 
 def generate_learning_plan(user_profile):
 
-    history = user_profile["history"]
-    learning_goal = user_profile["goal"]
-    level = user_profile["level"]
+    history = user_profile.history
+    learning_goal = user_profile.goal
+    level = user_profile.level
 
     if "第一个小项目" in history:
         print("你已经完成 Python 入门阶段，我们开始进阶学习。")

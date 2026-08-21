@@ -7,10 +7,10 @@ def complete_task(user_profile, learning_plan, task_number):
 
     task = learning_plan[index]
 
-    if task in user_profile["history"]:
+    if task in user_profile.history:
         return False
 
-    user_profile["history"].append(task)
+    user_profile.history.append(task)
 
     return True
 
@@ -20,7 +20,7 @@ def calculate_progress(user_profile, learning_plan):
     completed_count = 0
 
     for task in learning_plan:
-        if task in user_profile["history"]:
+        if task in user_profile.history:
             completed_count += 1
 
     total_count = len(learning_plan)
