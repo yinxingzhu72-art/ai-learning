@@ -65,7 +65,7 @@ def show_learning_memory(user_profile):
     print("")
     print("========== 学习记忆 ==========")
 
-    history = user_profile["history"]
+    history = user_profile.history
 
     if history:
         print("你之前学习过：")

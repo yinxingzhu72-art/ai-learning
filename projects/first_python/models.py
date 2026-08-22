@@ -6,6 +6,7 @@ class UserProfile:
         self.level = level
         self.history = []
         self.learning_plan = []
+        self.state = None
 
 
     def add_history(self, task):
@@ -19,7 +20,8 @@ class UserProfile:
             "goal": self.goal,
             "level": self.level,
             "history": self.history,
-            "learning_plan": self.learning_plan
+            "learning_plan": self.learning_plan,
+            "state": self.state
         }
 user = UserProfile(
     "杏珠",

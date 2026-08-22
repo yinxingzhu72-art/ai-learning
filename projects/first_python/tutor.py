@@ -5,13 +5,20 @@ from learning import analyze_stage, stage_advice, stage_reason, generate_learnin
 from progress import complete_task, calculate_progress, get_progress_detail
 
 from report import learning_report
+from state import analyze_user_state
 
 
 def run_tutor(user_profile):
-    stage = analyze_stage(user_profile.history)
+    state = analyze_user_state(user_profile)
+    user_profile.state = state.to_dict()
+
+    stage = state.stage
+    print("学习状态：")
+    print(state.to_dict())
+    print("下一步建议：" + state.next_action)
     print("你的当前学习阶段：" + stage)
 
-    advice = stage_advice(stage)
+    advice = state.next_action
 
     print("学习建议：" + advice)
 
@@ -37,7 +44,7 @@ def run_tutor(user_profile):
         print("任务完成记录成功！")
         print(user_profile.history)
     else:
-        print("任务编号错误！")
+        print("任务已经完成或者编号错误！")
     progress = calculate_progress(user_profile, learning_plan)
 
     print("当前完成率：" + str(int(progress)) + "%")
